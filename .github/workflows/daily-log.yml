@@ -2,7 +2,7 @@ name: Daily Ethical Hacking Log
 
 on:
   schedule:
-    - cron: "30 18 * * *"   # Runs daily at 12:00 AM IST
+    - cron: "30 18 * * *"   # 12:00 AM IST
   workflow_dispatch:
 
 permissions:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create Day folder if not exists
+      - name: Create daily log folder
         run: |
           DAY_COUNT=$(ls -d Day-* 2>/dev/null | wc -l)
           NEXT_DAY=$((DAY_COUNT + 1))
@@ -24,27 +24,27 @@ jobs:
 
           if [ ! -d "$FOLDER" ]; then
             mkdir "$FOLDER"
-            cat <<EOF > "$FOLDER/README.md"
-# 📘 Day $NEXT_DAY – Ethical Hacking Learning Log
 
-## 📅 Date
-$(date +"%d-%m-%Y")
+            echo "# 📘 Day $NEXT_DAY – Ethical Hacking Learning Log" > "$FOLDER/README.md"
+            echo "" >> "$FOLDER/README.md"
+            echo "## 📅 Date" >> "$FOLDER/README.md"
+            echo "$(date +"%d-%m-%Y")" >> "$FOLDER/README.md"
+            echo "" >> "$FOLDER/README.md"
+            echo "## 🔍 Topics Learned" >> "$FOLDER/README.md"
+            echo "-" >> "$FOLDER/README.md"
+            echo "" >> "$FOLDER/README.md"
+            echo "## 🛠 Tools / Platforms Used" >> "$FOLDER/README.md"
+            echo "-" >> "$FOLDER/README.md"
+            echo "" >> "$FOLDER/README.md"
+            echo "## 🧠 My Understanding" >> "$FOLDER/README.md"
+            echo "-" >> "$FOLDER/README.md"
+            echo "" >> "$FOLDER/README.md"
+            echo "## 🔑 Key Takeaways" >> "$FOLDER/README.md"
+            echo "-" >> "$FOLDER/README.md"
+            echo "" >> "$FOLDER/README.md"
+            echo "## ✅ Status" >> "$FOLDER/README.md"
+            echo "⏳ In Progress" >> "$FOLDER/README.md"
 
-## 🔍 Topics Learned
-- 
-
-## 🛠 Tools / Platforms Used
-- 
-
-## 🧠 My Understanding
-- 
-
-## 🔑 Key Takeaways
-- 
-
-## ✅ Status
-⏳ In Progress
-EOF
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add "$FOLDER/README.md"
