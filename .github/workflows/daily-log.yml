@@ -2,7 +2,7 @@ name: Daily Ethical Hacking Log
 
 on:
   schedule:
-    - cron: "30 18 * * *"   # 12:00 AM IST
+    - cron: "30 18 * * *"   # Runs at 12:00 AM IST
   workflow_dispatch:
 
 permissions:
@@ -16,15 +16,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create daily log folder
+      - name: Create daily learning folder
         run: |
           DAY_COUNT=$(ls -d Day-* 2>/dev/null | wc -l)
           NEXT_DAY=$((DAY_COUNT + 1))
-          FOLDER="Day-$(printf "%02d" $NEXT_DAY)"
+          DAY_PADDED=$(printf "%02d" $NEXT_DAY)
+          FOLDER="Day-$DAY_PADDED"
 
           if [ ! -d "$FOLDER" ]; then
             mkdir "$FOLDER"
 
+            # README.md
             echo "# 📘 Day $NEXT_DAY – Ethical Hacking Learning Log" > "$FOLDER/README.md"
             echo "" >> "$FOLDER/README.md"
             echo "## 📅 Date" >> "$FOLDER/README.md"
@@ -36,7 +38,7 @@ jobs:
             echo "## 🛠 Tools / Platforms Used" >> "$FOLDER/README.md"
             echo "-" >> "$FOLDER/README.md"
             echo "" >> "$FOLDER/README.md"
-            echo "## 🧠 My Understanding" >> "$FOLDER/README.md"
+            echo "## 🧠 What I Learned Today" >> "$FOLDER/README.md"
             echo "-" >> "$FOLDER/README.md"
             echo "" >> "$FOLDER/README.md"
             echo "## 🔑 Key Takeaways" >> "$FOLDER/README.md"
@@ -45,11 +47,39 @@ jobs:
             echo "## ✅ Status" >> "$FOLDER/README.md"
             echo "⏳ In Progress" >> "$FOLDER/README.md"
 
+            # explain.md
+            echo "# Simple Explanation – Day $NEXT_DAY" > "$FOLDER/explain.md"
+            echo "" >> "$FOLDER/explain.md"
+            echo "This file explains today's topic in simple terms for beginners." >> "$FOLDER/explain.md"
+            echo "" >> "$FOLDER/explain.md"
+            echo "## What is this topic about?" >> "$FOLDER/explain.md"
+            echo "-" >> "$FOLDER/explain.md"
+            echo "" >> "$FOLDER/explain.md"
+            echo "## Why is it important?" >> "$FOLDER/explain.md"
+            echo "-" >> "$FOLDER/explain.md"
+            echo "" >> "$FOLDER/explain.md"
+            echo "## How it is used in security?" >> "$FOLDER/explain.md"
+            echo "-" >> "$FOLDER/explain.md"
+
+            # notes.md
+            echo "# Personal Notes – Day $NEXT_DAY" > "$FOLDER/notes.md"
+            echo "" >> "$FOLDER/notes.md"
+            echo "- Short points" >> "$FOLDER/notes.md"
+            echo "- Things to revise" >> "$FOLDER/notes.md"
+            echo "- Important reminders" >> "$FOLDER/notes.md"
+
+            # questions.md
+            echo "# Questions – Day $NEXT_DAY" > "$FOLDER/questions.md"
+            echo "" >> "$FOLDER/questions.md"
+            echo "- What did I not fully understand today?" >> "$FOLDER/questions.md"
+            echo "- What should I revise again?" >> "$FOLDER/questions.md"
+            echo "- Interview or thinking questions" >> "$FOLDER/questions.md"
+
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add "$FOLDER/README.md"
-            git commit -m "Day $NEXT_DAY: create learning log template"
+            git add "$FOLDER"
+            git commit -m "Day $NEXT_DAY: create daily learning templates"
             git push
           else
-            echo "Day folder already exists. No action taken."
+            echo "Day folder already exists"
           fi
