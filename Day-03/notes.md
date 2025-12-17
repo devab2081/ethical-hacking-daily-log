@@ -1,5 +1,6 @@
-# Personal Notes – Day 3
-
-- Short points
-- Things to revise
-- Important reminders
+### Personal Notes
+- Linux is an operating system
+- Mostly used in cybersecurity
+- Everything is treated as a file
+- Terminal usage is important
+- Kali Linux is popular for ethical hacking
