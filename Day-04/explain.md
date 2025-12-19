@@ -1,12 +1,15 @@
-# Simple Explanation – Day 4
+# Reconnaissance Basics – Simple Explanation (Day 04)
 
-This file explains today's topic in simple terms for beginners.
+## What is Reconnaissance?
+Reconnaissance is the process of collecting information about a system, website, or organization.
 
-## What is this topic about?
--
+## Why is Reconnaissance Important?
+Attackers use reconnaissance to understand how a system works.
+The more information they have, the easier it becomes to find weaknesses.
 
-## Why is it important?
--
+## Types of Reconnaissance
+- Passive reconnaissance: Information is collected without touching the target.
+- Active reconnaissance: Information is collected by interacting with the target.
 
-## How it is used in security?
--
+## Why Students Should Learn This
+Understanding reconnaissance helps in identifying what information should be protected and what should not be publicly exposed.
