@@ -1,12 +1,17 @@
-# Simple Explanation – Day 8
+# Cross Site Scripting – Simple Explanation (Day 08)
 
-This file explains today's topic in simple terms for beginners.
+## What is XSS?
+XSS allows attackers to run scripts in a user’s browser through a vulnerable website.
 
-## What is this topic about?
--
+## Why is it Dangerous?
+Attackers may steal session data or perform actions on behalf of users.
 
-## Why is it important?
--
+## Where Does XSS Commonly Occur?
+- Comment sections  
+- Feedback forms  
+- Search inputs  
 
-## How it is used in security?
--
+## How Can It Be Prevented?
+- Validate user input  
+- Encode output properly  
+- Follow secure development practices  
