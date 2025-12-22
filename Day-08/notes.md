@@ -1,5 +1,5 @@
-# Personal Notes – Day 8
-
-- Short points
-- Things to revise
-- Important reminders
+### Personal Notes
+- XSS runs in user browser
+- Caused by unsafe output handling
+- Affects users directly
+- Can be prevented with encoding
