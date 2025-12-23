@@ -1,9 +1,47 @@
-# Visual Diagram – Day 6
+# Day 06 – OWASP Top 10 (Visual Diagram)
 
-Use this file to add simple text-based diagrams.
-
-## Diagram
+## What is OWASP?
+```
+OWASP
+|
+v
+Security Guidelines
+|
+v
+Safer Web Applications
 
 ```
-Add your visual diagram here
+---
+
+## OWASP Top 10 Concept
+
+```
+Web Applications
+|
+v
+Common Security Risks
+|
+v
+OWASP Top 10 List
+|
+v
+Focus on Most Critical Issues
+
+```
+---
+
+## Why OWASP Top 10 is Important
+
+```
+Developers
+|
+v
+Understand Common Risks
+|
+v
+Apply Security Best Practices
+|
+v
+Reduce Attacks
+
 ```
