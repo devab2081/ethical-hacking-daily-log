@@ -1,5 +1,4 @@
-# Questions – Day 9
-
-- What did I not fully understand today?
-- What should I revise again?
-- Interview or thinking questions
+### Questions
+- What happens if session IDs are predictable?
+- Why is authorization needed after authentication?
+- How can session timeouts improve security?
