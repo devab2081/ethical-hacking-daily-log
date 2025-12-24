@@ -1,12 +1,21 @@
-# Simple Explanation – Day 10
+# Security Tools Overview – Simple Explanation (Day 10)
 
-This file explains today's topic in simple terms for beginners.
+## What Are Security Tools?
+Security tools are software programs that help identify weaknesses in systems and applications.
 
-## What is this topic about?
--
+## Why Are Tools Used?
+Tools save time and help automate repetitive security checks.
+They assist security professionals in analysis and testing.
 
-## Why is it important?
--
+## Examples of Security Tools
+- Network scanning tools  
+- Web application testing tools  
+- Browser-based analysis tools  
 
-## How it is used in security?
--
+## Important Note for Beginners
+Tools should never be used on real systems without permission.
+Understanding the concept behind each tool is more important than learning commands.
+
+## Learning Tip
+Start by understanding what a tool does and why it is used.
+Practical usage should be done only in legal labs and learning environments.
