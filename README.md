@@ -27,6 +27,8 @@ All practices are done **legally** using labs and learning platforms.
 - [Day 08 – Cross Site Scripting (XSS)](Day-08/)
 - [Day 09 – Authentication & Session Attacks](Day-09/)
 - [Day 10 – Tools Overview & Practice](Day-10/)
+- [Day 11 – Vulnerability Assessment Basics](Day-11/)
+- [Day 12 – Penetration Testing Basics](Day-12/)
 - [Day 13 – Security Testing Methodologies](Day-13/)
 - [Day 14 – Web Application Architecture Basics](Day-14/)
 - [Day 15 – Common Web Application Components](Day-15/)
