@@ -1,5 +1,5 @@
-# Personal Notes – Day 11
-
-- Short points
-- Things to revise
-- Important reminders
+### Personal Notes
+- Vulnerability = weakness
+- Threat = possible attacker
+- Assessment focuses on finding issues
+- Used before penetration testing
