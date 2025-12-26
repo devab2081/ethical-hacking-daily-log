@@ -1,5 +1,4 @@
-# Questions – Day 11
-
-- What did I not fully understand today?
-- What should I revise again?
-- Interview or thinking questions
+### Questions
+- How are vulnerabilities prioritized?
+- Can vulnerability assessment fully secure a system?
+- How often should assessments be done?
