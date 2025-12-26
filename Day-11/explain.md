@@ -1,12 +1,17 @@
-# Simple Explanation – Day 11
+# Vulnerability Assessment – Simple Explanation (Day 11)
 
-This file explains today's topic in simple terms for beginners.
+## What is Vulnerability Assessment?
+Vulnerability assessment is a method used to find security weaknesses in systems and applications.
 
-## What is this topic about?
--
+## Why is it Important?
+Finding vulnerabilities early helps prevent attacks and data breaches.
 
-## Why is it important?
--
+## What Does It Focus On?
+- Identifying weaknesses  
+- Understanding risk levels  
+- Suggesting fixes  
 
-## How it is used in security?
--
+## Who Uses Vulnerability Assessment?
+- Security teams  
+- Developers  
+- Organizations handling user data  
